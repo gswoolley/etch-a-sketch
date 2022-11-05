@@ -1,0 +1,1 @@
+This project is a web based sketchpad/etch-a-sketch program. It is a practice of DOM manipulation.
