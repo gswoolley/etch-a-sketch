@@ -1,0 +1,15 @@
+#container{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: 1px solid black;
+}
+
+.grid-element{
+    background-color: white;
+    aspect-ratio: 1;
+    border: 1px solid black;
+}
