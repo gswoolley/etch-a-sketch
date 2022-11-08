@@ -4,7 +4,7 @@ let numSquares = 256;
 let gridSquares = document.getElementsByClassName("grid-element");
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+output.innerHTML = `${slider.value} x ${slider.value}`; // Display the default slider value
 
 createSquares();
 
@@ -27,6 +27,7 @@ function clear(){
 
 //deletes all grid-elements
 function reset() {
+    //clear();
     document
       .querySelectorAll(".grid-element")
       .forEach((e) => e.parentNode.removeChild(e));
@@ -50,14 +51,14 @@ clearBtn.addEventListener("click", () => {
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
-  output.innerHTML = this.value;
+  container.style.backgroundColor = 'white';
+  output.innerHTML = `${this.value} x ${this.value}`;
   numSquares = this.value ** 2;
   numSquares = (this.value)*(this.value);
-  console.log(numSquares);
   createSquares();
   container.style.gridTemplateColumns = `repeat(${this.value}, 1fr)`
   container.style.gridTemplateRows = `repeat(${this.value}, 1fr)`
-  container.style.backgroundColor = 'white';
+  
   
 };
 
